@@ -1,10 +1,12 @@
 package com.company;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
+        Main obj = new Main();
 
         // Exercise Part 1: Create Catalogue and Item classes
         // Create a catalogue with size 10
@@ -13,12 +15,18 @@ public class Main {
         //Create items and add to catalogue
         Item item1 = new Item("Sport", "Skateboard");
         catalogue.addItem(item1);
+        System.out.println(item1);
         Item item2 = new Item("Sport", "Mountainbike");
+        System.out.println(item2);
         catalogue.addItem(item2);
         Item item3 = new Item("Tøj", "Smoking");
         catalogue.addItem(item3);
+        System.out.println(item3);
         Item item4 = new Item("Tøj", "Pailletkjole");
         catalogue.addItem(item4);
+        System.out.println(item4);
+
+        System.out.println(Arrays.toString(catalogue.getFullList()));
         ///////////////////////////////////////////////
 /*
         // Exercise Part 2: Make program with user input instead of hardcoded values

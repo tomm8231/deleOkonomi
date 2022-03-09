@@ -2,7 +2,7 @@ package com.company;
 
 public class Catalogue {
 
-  private int counter = 0;
+  private int counter;
 
   private Item[] items;
 
@@ -14,4 +14,9 @@ public class Catalogue {
     items[counter++] = i;
   }
 
-}
+  public Item[] getFullList() {
+    return items;
+  }
+
+  }
+
