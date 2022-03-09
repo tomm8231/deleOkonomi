@@ -12,6 +12,18 @@ public class Item {
     isAvailable = true;
   }
 
+  public boolean showAvailability() {
+    return isAvailable;
+  }
+
+  public void changeAvailability() {
+    if (isAvailable == true) {
+      isAvailable = false;
+    } else {
+      isAvailable = true;
+    }
+  }
+
 
   public String toString() {
     return category + " " + item;

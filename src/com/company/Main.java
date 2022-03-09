@@ -26,9 +26,9 @@ public class Main {
         catalogue.addItem(item4);
         System.out.println(item4);
 
-        System.out.println(Arrays.toString(catalogue.getFullList()));
+        // System.out.println(Arrays.toString(catalogue.getFullList()));
         ///////////////////////////////////////////////
-/*
+
         // Exercise Part 2: Make program with user input instead of hardcoded values
         // Make program able to show menu and handles user choices in loop
         // Ask user what user wants to do
@@ -49,11 +49,13 @@ public class Main {
             for (int i = 0; i < allItems.length; i++) {
                 System.out.println(allItems[i]);
             }
+
         } else if (choice == 2) { // get available items in cataloque
             Item[] availableItems = catalogue.getAvailableItems();
             for (int i = 0; i < availableItems.length; i++) {
                 System.out.println(availableItems[i]);
             }
+        /*
         } else if (choice == 3) { // Add new Item to catalogue
             // Hardcoded values for new Item
             catalogue.addItem(new Item("Sport", "Tennisbolde"));
@@ -70,5 +72,6 @@ public class Main {
         }
 
  */
+        }
     }
 }

@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.List;
+
 public class Catalogue {
 
   private int counter;
@@ -17,6 +19,23 @@ public class Catalogue {
   public Item[] getFullList() {
     return items;
   }
+
+  public Item[] getAvailableItems() {
+    Item[] availables = new Item[items.length];
+    for(int i = 0; i < items.length; i++) {
+      Item temp = items[i];
+      if (temp != null && temp.showAvailability()) {
+        availables[i] = temp;
+      }
+    }
+    return availables;
+  }
+
+  /*public void removeNull() {
+    while (List.remove(null)) {
+    }
+  }
+  */
 
   }
 
