@@ -6,8 +6,6 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        Main obj = new Main();
-
         // Exercise Part 1: Create Catalogue and Item classes
         // Create a catalogue with size 10
         Catalogue catalogue = new Catalogue(10);
@@ -65,17 +63,15 @@ public class Main {
             System.out.println(found);
             catalogue.borrowItem(found);
             System.out.println(found);
-        }
-
-    /*
         } else if (choice == 5) { // make item available again
             // Hardcoded search criteria Skateboard
             Item found = catalogue.findItem("Skateboard");
+            System.out.println(found);
             catalogue.returnItem(found);
+            System.out.println(found);
         } else { // invalid choice
             System.out.println("Du foretog et ugyldigt valg.");
         }
- */
         }
     }
 

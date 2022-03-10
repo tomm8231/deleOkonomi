@@ -1,7 +1,5 @@
 package com.company;
 
-import java.util.List;
-
 public class Catalogue {
 
   private int counter;
@@ -43,6 +41,10 @@ public class Catalogue {
 
   public void borrowItem(Item found) {
     found.makeUnavailable();
+  }
+
+  public void returnItem(Item found) {
+    found.makeAvailable();
   }
 
 }
