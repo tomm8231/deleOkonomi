@@ -24,13 +24,13 @@ public class Item {
     return isAvailable;
   }
 
-    public void changeAvailability () {
-      if (isAvailable == true) {
-        isAvailable = false;
-      } else {
-        isAvailable = true;
-      }
-    }
+  public void makeAvailable() {
+      isAvailable = true;
+  }
+
+  public void makeUnavailable() {
+    isAvailable = false;
+  }
 
 
     public String toString () {

@@ -75,7 +75,6 @@ public class Main {
         } else { // invalid choice
             System.out.println("Du foretog et ugyldigt valg.");
         }
-
  */
         }
     }

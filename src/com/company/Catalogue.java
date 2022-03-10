@@ -42,7 +42,7 @@ public class Catalogue {
   }
 
   public void borrowItem(Item found) {
-    found.changeAvailability();
+    found.makeUnavailable();
   }
 
 }
