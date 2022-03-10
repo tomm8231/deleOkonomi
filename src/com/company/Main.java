@@ -58,12 +58,16 @@ public class Main {
         } else if (choice == 3) { // Add new Item to catalogue
             // Hardcoded values for new Item
             catalogue.addItem(new Item("Sport", "Tennisbolde"));
-       //     System.out.println(Arrays.toString(catalogue.getFullList()));
-    /*
+                System.out.println(Arrays.toString(catalogue.getFullList()));
         } else if (choice == 4) { // make item unavailable
             // Hardcoded search criteria Skateboard
             Item found = catalogue.findItem("Skateboard");
+            System.out.println(found);
             catalogue.borrowItem(found);
+            System.out.println(found);
+        }
+
+    /*
         } else if (choice == 5) { // make item available again
             // Hardcoded search criteria Skateboard
             Item found = catalogue.findItem("Skateboard");
@@ -75,4 +79,4 @@ public class Main {
  */
         }
     }
-}
+
