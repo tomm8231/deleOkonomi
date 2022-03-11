@@ -12,20 +12,25 @@ public class Menu {
   }
 
   public void showCatalogue(Catalogue catalogue) {
-    System.out.println("Den fulde liste:");
+    /*System.out.println("Den fulde liste:");
     Item[] allItems = catalogue.getFullList();
     for (int i = 0; i < allItems.length; i++) {
     System.out.println(allItems[i]);
     }
+     */
+    catalogue.getFullList();
     newLine();
   }
 
   public void showAvailableItems(Catalogue catalogue) {
-    System.out.println("Hvad der er ledigt:");
+   /* System.out.println("Hvad der er ledigt:");
     Item[] availableItems = catalogue.getAvailableItems();
     for (int i = 0; i < availableItems.length; i++) {
       System.out.println(availableItems[i]);
     }
+    */
+    System.out.println("Hvad der er ledigt:");
+    catalogue.getAvailableItems();
     newLine();
   }
 
@@ -39,7 +44,7 @@ public class Menu {
     String item = sc.nextLine();
     newLine();
     catalogue.addItem(new Item(category, item));
-    System.out.println("Genstanden er nu tilføjet og kan tilgås via kataloget.");
+    System.out.println(item + " er nu tilføjet under " + category + " og kan tilgås via kataloget.");
     newLine();
     //System.out.println(Arrays.toString(catalogue.getFullList()));
   }
@@ -49,12 +54,12 @@ public class Menu {
     System.out.println("Hvilken ting vil du låne?");
 
     sc.nextLine(); // scanner bug
-    String itemTest = sc.nextLine();
+    String searchName = sc.nextLine();
 
-    Item found = catalogue.findItem(itemTest);
+    Item found = catalogue.findItem(searchName);
     catalogue.borrowItem(found);
 
-    System.out.println("Du har hermed lånt " + found);
+    System.out.println("Du har hermed lånt " + searchName);
     newLine();
   }
 
@@ -63,14 +68,14 @@ public class Menu {
     System.out.println("Hvilken vare vil du aflevere?");
 
     sc.nextLine();
-    String item = sc.nextLine();
+    String searchName = sc.nextLine();
 
-    Item found = catalogue.findItem(item);
+    Item found = catalogue.findItem(searchName);
 
-    System.out.println(found);
     catalogue.returnItem(found);
-    System.out.println(found);
-    System.out.println("Tak! Varen er nu afleveret.");
+
+    System.out.println("Tak! " + searchName + " er nu afleveret.");
+
     newLine();
   }
 

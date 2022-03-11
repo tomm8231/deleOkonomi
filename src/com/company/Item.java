@@ -30,6 +30,6 @@ public class Item {
 
 
     public String toString () {
-      return category + " " + description + " " + isAvailable;
+      return category + " " + description;
     }
   }
