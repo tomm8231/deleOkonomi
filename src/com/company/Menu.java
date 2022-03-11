@@ -48,7 +48,7 @@ public class Menu {
     // Hardcoded search criteria Skateboard
     System.out.println("Hvilken ting vil du låne?");
 
-    sc.nextLine(); //scanner bug
+    sc.nextLine(); // scanner bug
     String itemTest = sc.nextLine();
 
     Item found = catalogue.findItem(itemTest);
@@ -84,14 +84,25 @@ public class Menu {
     newLine();
   }
 
+  public void menuOptions() {
+    System.out.println("------------------------------");
+    newLine();
+    System.out.println("Hvad kunne du tænke dig?");
+    newLine();
+    System.out.println("1. Se hele kataloget");
+    System.out.println("2. Se hvad der er ledigt");
+    System.out.println("3. Opret ting til udlån");
+    System.out.println("4. Lån ting");
+    System.out.println("5. Aflever ting");
+    System.out.println("0. Exit");
+  }
+
   public void mainMenu() {
     Catalogue catalogue = new Catalogue(10);
 
     //Create items and add to catalogue
     Item item1 = new Item("Sport", "Skateboard");
     catalogue.addItem(item1);
-    System.out.println(item1);
-
     // System.out.println(Arrays.toString(catalogue.getFullList()));
     ///////////////////////////////////////////////
 
@@ -103,22 +114,16 @@ public class Menu {
 
     while (choice != 0) {
 
-      System.out.println("Hvad kunne du tænke dig?");
-      newLine();
-      System.out.println("1. Se hele kataloget");
-      System.out.println("2. Se hvad der er ledigt");
-      System.out.println("3. Opret ting til udlån");
-      System.out.println("4. Lån ting");
-      System.out.println("5. Aflever ting");
-      System.out.println("0. Exit");
+      // Menu options
+      menuOptions();
 
       // Read user choice
       choice = sc.nextInt();
       newLine();
 
       // Decide what to do based on user choice
-
       switch (choice) {
+
         case 1 -> {
           showCatalogue(catalogue);
         }
@@ -138,41 +143,8 @@ public class Menu {
           terminateProgramme();
         }
         default -> invalidChoiceMessage();
-      }
-
-      /*
-      if (choice == 1) { // get all items in cataloque
-
-        showCatalogue(catalogue);
-
-      } else if (choice == 2) { // get available items in cataloque
-
-        showAvailableItems(catalogue);
-
-      } else if (choice == 3) { // Add new Item to catalogue
-
-        addNewItem(catalogue);
-
-      } else if (choice == 4) { // make item unavailable
-
-        makeItemUnavailable(catalogue);
-
-      } else if (choice == 5) { // make item available again
-
-        makeItemAvailable(catalogue);
-
-      } else if (choice == 0) {
-
-        terminateProgramme();
 
       }
-      else { // invalid choice
-
-        invalidChoiceMessage();
-
-      }
-
-       */
     }
   }
 }
