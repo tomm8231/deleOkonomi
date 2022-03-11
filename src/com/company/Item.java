@@ -16,10 +16,6 @@ public class Item {
    return description;
   }
 
-  public void setAvability(boolean isAvailable) {
-    this.isAvailable = isAvailable;
-  }
-
   public boolean showAvailability() {
     return isAvailable;
   }

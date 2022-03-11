@@ -15,6 +15,7 @@ public class Catalogue {
   }
 
   public Item[] getFullList() {
+
     return items;
   }
 
