@@ -106,8 +106,8 @@ public class Menu {
     Catalogue catalogue = new Catalogue(10);
 
     //Create items and add to catalogue
-    Item item1 = new Item("Sport", "Skateboard");
-    catalogue.addItem(item1);
+    //Item item1 = new Item("Sport", "Skateboard");
+    //catalogue.addItem(item1);
     // System.out.println(Arrays.toString(catalogue.getFullList()));
     ///////////////////////////////////////////////
 
